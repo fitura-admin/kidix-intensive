@@ -46,6 +46,8 @@
     <script type="module" src="/js/components/nav/main.js"></script>
     <script type="module" src="/js/components/hero/main.js"></script>
     <script type="module" src="/js/components/day/main.js"></script>
+    <script type="module" src="/js/components/weeks/carousel.js"></script>
+    <script type="module" src="/js/components/weeks/main.js"></script>
   </head>
   <body class="body flex-column">
     <!-- HEADER -->
@@ -314,7 +316,7 @@
         <button class="button day__button--green">
           <span class="days-one text-16 lh-175 text-center black">
             Оставить заявку
-            </span>
+          </span>
         </button>
       </div>
 
@@ -943,6 +945,71 @@
       </svg>
     </section>
 
+    <!-- WEEKS -->
+    <section class="weeks relative" id="weeks">
+      <div
+        class="weeks__container section-container flex-column relative"
+        id="week-content"
+      >
+        <div class="weeks__heading flex-row align-center justify-between">
+          <h2 class="days-one text-64-48 black lh-80">Недели интенсива</h2>
+        </div>
+
+        <div
+          class="weeks__carousel flex-row mandatory-x-container no-scrollbar"
+          id="weeks-carousel"
+          role="list"
+        ></div>
+
+        <div class="weeks__week flex-column relative">
+          <picture class="week__bg absolute">
+            <source
+              media="(min-width: 769px)"
+              srcset="/media/weeks/card/1.png"
+              type="image/png"
+              id="week-bg-source-1"
+            />
+            <source
+              media="(max-width: 768px)"
+              srcset="/media/weeks/card/1-media.png"
+              type="image/png"
+              id="week-bg-source-2"
+            />
+            <img src="/media/weeks/card/1.png" alt="" width="521" height="356" />
+          </picture>
+
+          <div class="week__heading flex-row align-center">
+            <h6
+              class="week__heading__week violet-main text-14 lh-143 days-one"
+            ></h6>
+            <h6
+              class="week__heading__date violet-main text-14 lh-143 days-one"
+            ></h6>
+            <p
+              class="week__heading__extra black text-14 lh-143 days-one uppercase"
+            ></p>
+          </div>
+
+          <div class="flex-column week__text">
+            <div class="flex-column gap-10px">
+              <h3
+                class="black text-48-32 days-one uppercase week__title pre-wrap"
+              ></h3>
+              <h4
+                class="geologica text-20-16 violet-main lh-120 week__subtitle pre-wrap"
+              ></h4>
+            </div>
+
+            <p
+              class="text-16-14 lh-150 black geologica week__text__paragraph"
+            ></p>
+          </div>
+
+          <div class="week__steps grid"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Templates -->
     <template id="nav-item-template">
       <a class="nav__item text-12 days-one black" rel="noopener noreferrer">
@@ -976,6 +1043,48 @@
           </span>
         </button>
       </li>
+    </template>
+
+    <template id="weeks-carousel-item-template">
+      <div
+        class="carousel__item flex-column mandatory-x-item relative"
+        role="listitem"
+      >
+        <div class="flex-column">
+          <h6 class="lily days-one text-12 lh-170 carousel__item__week"></h6>
+          <p class="text-12 lh-120 geologica black carousel__item__date"></p>
+        </div>
+
+        <h5 class="days-one text-16 black uppercase carousel__item__title"></h5>
+
+        <p class="black geologica text-12 lh-120 carousel__item__text"></p>
+
+        <img
+          alt=""
+          width="60"
+          height="60"
+          class="carousel__item__icon absolute"
+        />
+      </div>
+    </template>
+
+    <template id="week-card-step">
+      <div
+        class="flex-row align-center week__step"
+        role="listitem"
+        id="week-card"
+      >
+        <p class="week__step__marker black days-one text-14-10"></p>
+        <div class="week__step__icon">
+          <img alt="" width="60" height="80" />
+        </div>
+        <div class="flex-column week__step__text">
+          <h6 class="black days-one text-14-10 lh-120 week__step__title"></h6>
+          <p
+            class="black geologica text-14-10 lh-120 week__step__description"
+          ></p>
+        </div>
+      </div>
     </template>
   </body>
 </html>

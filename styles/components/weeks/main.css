@@ -1,0 +1,197 @@
+@import url("./carousel.css");
+
+.weeks {
+  padding-top: var(--space-60px);
+  padding-bottom: var(--space-3);
+
+  background: url("/media/weeks/bg.webp") no-repeat center / cover;
+
+  @media screen and (width <= 768px) {
+    background: url("/media/weeks/bg-mobile.webp") no-repeat center / cover;
+  }
+}
+
+.weeks__container {
+  gap: var(--space-10);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-5);
+  }
+}
+
+.weeks__heading {
+  gap: var(--space-4);
+}
+
+.weeks__heading__button {
+  padding: var(--space-2) var(--space-6);
+  background: var(--violet-main);
+  border-radius: var(--space-100px);
+}
+
+.weeks__week {
+  padding: var(--space-30px);
+  border-radius: var(--space-30px);
+  background: #f6f3fa;
+
+  gap: var(--space-30px);
+
+  overflow: hidden;
+
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-10px);
+
+    padding: var(--space-10px);
+    padding-top: var(--space-5);
+    padding-bottom: 241px;
+    border-radius: var(--space-5);
+  }
+}
+
+.weeks__week.animate {
+  transform: scale(0.95) translateY(20px);
+  opacity: 0;
+}
+
+.week__bg {
+  z-index: 0;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  max-width: 521px;
+  max-height: 356px;
+  overflow: visible;
+
+  @media screen and (width <= 768px) {
+    top: unset;
+    bottom: 0;
+    right: 50%;
+    translate: 50% 0;
+    width: 100%;
+  }
+}
+
+.week__heading__week,
+.week__heading__date,
+.week__heading__title,
+.week__heading__subtitle,
+.week__heading__extra,
+.week__title,
+.week__step {
+  position: relative;
+  z-index: 1;
+}
+
+.week__heading {
+  gap: var(--space-5);
+
+  @media screen and (width <= 768px) {
+    display: none;
+  }
+}
+
+.week__heading__extra {
+  padding: var(--space-5px) var(--space-10px);
+  border-radius: 85px;
+  background-color: var(--green-main);
+}
+
+.week__text {
+  gap: var(--space-5);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-10px);
+    align-items: center;
+
+    .flex-column {
+        align-items: center;
+    }
+
+    p {
+        max-width: unset !important;
+        text-align: center;
+    }
+  }
+}
+
+.week__title {
+  @media screen and (width <= 768px) {
+    text-align: center;
+  }
+}
+
+.week__text__paragraph {
+  max-width: 50%;
+}
+
+.week__steps {
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-10px);
+  width: 100%;
+}
+
+.week__step {
+  grid-column: 4 span;
+
+  box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.07);
+
+  width: 100%;
+  padding: var(--space-10px);
+  border-radius: var(--space-5);
+  background: #fff;
+
+  gap: var(--space-10px);
+
+  @media screen and (width <= 1024px) {
+    grid-column: 6 span;
+  }
+
+  @media screen and (width <= 768px) {
+    grid-column: 12 span;
+    border-radius: 15px;
+    gap: var(--space-6px);
+  }
+}
+
+.week__step__marker {
+  background-color: var(--green-main);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+
+  @media screen and (width <= 768px) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.week__step__icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 80px;
+
+  img {
+    object-fit: contain;
+  }
+  @media screen and (width <= 768px) {
+    width: 45px;
+    height: 60px;
+  }
+}
+
+.week__step__text {
+  gap: var(--space-1);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-0);
+  }
+}

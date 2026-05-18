@@ -13,8 +13,8 @@ export function renderList({
     const fragment =
         document.createDocumentFragment();
 
-    items.forEach((item) => {
-        fragment.appendChild(renderItem(item));
+    items.forEach((item, index) => {
+        fragment.appendChild(renderItem(item, index));
     });
 
     container.appendChild(fragment);
