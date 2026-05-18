@@ -1,0 +1,117 @@
+.section-container {
+  max-width: var(--container-width);
+  width: 100%;
+
+  padding: 0 var(--space-4);
+  margin: 0 auto;
+
+  /* 60px - height of header + padding */
+  scroll-margin-top: 60px;
+
+  @media screen and (width <= 768px) {
+    padding: 0 var(--space-4);
+  }
+}
+
+.button {
+  display: grid;
+  align-items: center;
+  transition: all var(--transition) !important;
+  user-select: none;
+
+  cursor: pointer !important;
+
+  &.active-scale:active {
+    transform: scale(0.95);
+  }
+
+  @media screen and (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.mandatory-x-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.mandatory-x-item {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* scrollbar */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-scrollbar) transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--green-scrollbar);
+  border-radius: var(--space-10px);
+  transition: background-color var(--fast-transition);
+}
+
+@media (any-hover: hover) {
+  .scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--green-scrollbar), black 20%);
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* bg-colors */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-green-main {
+  background-color: var(--green-main);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-green {
+  background-color: var(--green-main);
+}
+
+.bg-white-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-white-2 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-black-05 {
+  background-color: rgba(18, 18, 18, 0.05);
+}

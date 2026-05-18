@@ -1,0 +1,167 @@
+.hero {
+  --height: 800px;
+  min-height: var(--height);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow-x: hidden;
+
+  background: url("/media/hero/bg.webp") no-repeat center / cover;
+
+  @media screen and (width <= 1024px) {
+    padding-top: 150px; /* Высота хедера будет 136 + для скролла */
+  }
+
+  @media screen and (width <= 768px) {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+    min-height: auto;
+    background: url("/media/hero/bg-mobile.webp") no-repeat center / cover;
+  }
+}
+
+.hero__text-line {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--space-4);
+  height: auto;
+  max-height: 365px;
+  overflow-y: visible;
+
+  @media screen and (width <= 768px) {
+    bottom: unset;
+    top: 0;
+    max-height: 195px;
+
+  }
+}
+
+.hero__container {
+  gap: var(--space-6);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-5);
+  }
+}
+
+/* Три карточки */
+.hero__items {
+  position: relative;
+  z-index: 2;
+  gap: var(--space-10px);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-6px);
+  }
+}
+
+.hero__item {
+  padding: var(--space-10px) var(--space-5);
+  border-radius: var(--space-85px);
+
+  @media screen and (width <= 768px) {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-3) var(--space-5);
+  }
+
+  @media screen and (width <= 560px) {
+    width: 100%;
+    white-space: nowrap;
+    padding: var(--space-5px) var(--space-5);
+  }
+}
+
+/* Контент */
+.hero__content {
+  position: relative;
+  gap: var(--space-30px);
+
+  @media screen and (width <= 768px) {
+    gap: var(--space-10px);
+  }
+}
+
+.hero__button {
+  position: relative;
+  z-index: 1;
+
+  border-radius: 114px;
+  padding: var(--space-4) var(--space-6);
+  background: var(--green-main);
+
+  width: 100%;
+  max-width: 325px;
+
+  @media screen and (width <= 768px) {
+    padding: var(--space-3) var(--space-6);
+    max-width: unset;
+  }
+}
+
+.hero__text {
+  position: relative;
+  z-index: 2;
+  gap: 130px;
+
+  max-width: 558px;
+
+  @media screen and (width <= 768px) {
+    max-width: unset;
+    gap: 65px;
+
+    h1,
+    p {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+  }
+}
+
+.hero__text__vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  rotate: -3deg;
+  translate: 0 calc(100% - var(--space-1));
+
+  @media screen and (width <= 768px) {
+    max-width: 136px;
+    max-height: 56px;
+    left: 50%;
+    translate: -50% calc(100% - var(--space-1));
+  }
+}
+
+/* Оранжевый маскот */
+.hero__boy {
+  width: 761px;
+  height: 761px;
+
+  position: absolute;
+  top: -132px;
+  right: -70px;
+  z-index: 1;
+
+  @media screen and (width <= 1024px) {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+  }
+
+  @media screen and (width <= 768px) {
+    width: 335px;
+    height: 335px;
+
+    position: relative;
+    top: unset;
+    right: unset;
+    align-self: center;
+  }
+}

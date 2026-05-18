@@ -1,0 +1,59 @@
+:root {
+  --font-days-one: "Days One", sans-serif;
+  --font-geologica: "Geologica", sans-serif;
+}
+
+.days-one {
+  font-family: var(--font-days-one);
+}
+
+.geologica {
+  font-family: var(--font-geologica);
+}
+
+.prewrap {
+  white-space: pre-wrap;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* colors */
+.black {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+/* lh */
+.lh-80 {
+  line-height: 80%;
+}
+
+.lh-150 {
+  line-height: 150%;
+}
+
+/* sizes */
+.text-12 {
+  font-size: 12px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-14-10 {
+  font-size: clamp(0.625rem, 0.511rem + 0.45vw, 0.875rem);
+}
+
+.text-20-16 {
+  font-size: clamp(1rem, 0.886rem + 0.45vw, 1.25rem);
+}
+
+.text-96-48 {
+  font-size: clamp(3rem, 1.636rem + 5.45vw, 6rem);
+}

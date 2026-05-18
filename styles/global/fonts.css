@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Geologica";
+  src: url("/assets/Geologica-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Days One";
+  src: url("/assets/DaysOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: normal;
+  font-display: swap;
+}
