@@ -11,12 +11,17 @@
   font-family: var(--font-geologica);
 }
 
-.prewrap {
+.prewrap,
+.pre-wrap {
   white-space: pre-wrap;
 }
 
 .nowrap {
   white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* colors */
@@ -31,6 +36,10 @@
 /* lh */
 .lh-80 {
   line-height: 80%;
+}
+
+.lh-120 {
+  line-height: 120%;
 }
 
 .lh-150 {
@@ -50,8 +59,16 @@
   font-size: clamp(0.625rem, 0.511rem + 0.45vw, 0.875rem);
 }
 
+.text-16-12 {
+  font-size: clamp(0.75rem, 0.636rem + 0.45vw, 1rem);
+}
+
 .text-20-16 {
   font-size: clamp(1rem, 0.886rem + 0.45vw, 1.25rem);
+}
+
+.text-64-48 {
+  font-size: clamp(3rem, 2.545rem + 1.82vw, 4rem);
 }
 
 .text-96-48 {

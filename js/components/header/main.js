@@ -27,4 +27,6 @@ export function initStickyHeader() {
     return () => {
         window.removeEventListener("scroll", onScroll, { passive: true });
     };
-}
+};
+
+initStickyHeader()

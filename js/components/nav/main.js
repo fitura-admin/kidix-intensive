@@ -45,3 +45,5 @@ export function initHeaderNav() {
         renderItem: createNavItem
     })
 }
+
+initHeaderNav()

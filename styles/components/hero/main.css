@@ -1,13 +1,17 @@
 .hero {
   --height: 800px;
   min-height: var(--height);
+  height: 100%;
+
+  padding-top: 142px;
+  padding-bottom: 190px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   background: url("/media/hero/bg.webp") no-repeat center / cover;
 
@@ -29,6 +33,7 @@
   left: 0;
   right: 0;
   bottom: var(--space-4);
+  translate: 0 -20px;
   height: auto;
   max-height: 365px;
   overflow-y: visible;
@@ -37,7 +42,6 @@
     bottom: unset;
     top: 0;
     max-height: 195px;
-
   }
 }
 
