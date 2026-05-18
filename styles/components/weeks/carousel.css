@@ -10,6 +10,8 @@
   border-radius: var(--space-5);
   background: var(--white);
 
+  cursor: pointer;
+
   gap: var(--space-10px);
 
   width: 185px;

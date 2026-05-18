@@ -6,12 +6,12 @@
   box-sizing: border-box;
 
   &:focus-visible {
-    outline: 1px solid var(--red-main);
+    outline: 1px solid var(--green-main);
   }
 }
 
 * {
-  font-family: var(--font-onest);
+  font-family: var(--font-days-one);
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
   appearance: none;
@@ -48,8 +48,8 @@ html {
   }
 
   &::selection {
-    background-color: var(--red-main);
-    color: var(--white);
+    background-color: var(--green-main);
+    color: var(--black);
   }
 }
 
