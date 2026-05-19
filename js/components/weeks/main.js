@@ -22,8 +22,8 @@ export function renderWeek(key) {
     const source = document.getElementById("week-bg-source-1");
     const sourceMobile = document.getElementById("week-bg-source-2");
 
-    source.srcset = `/media/weeks/card/${weekIndex + 1}.png`;
-    sourceMobile.srcset = `/media/weeks/card/${weekIndex + 1}-media.png`;
+    source.srcset = `./media/weeks/card/${weekIndex + 1}.png`;
+    sourceMobile.srcset = `./media/weeks/card/${weekIndex + 1}-media.png`;
 
     const stepsContainer = weekContainer.querySelector(".week__steps");
 
@@ -72,7 +72,7 @@ export function renderWeek(key) {
 
             marker.textContent = index + 1;
 
-            icon.src = `/media/weeks/card/icons/${weekIndex + 1}/${index + 1}.png`;
+            icon.src = `./media/weeks/card/icons/${weekIndex + 1}/${index + 1}.png`;
 
             if (step.title) {
                 title.innerHTML = step.title.replace(/\n/g, "<br>");

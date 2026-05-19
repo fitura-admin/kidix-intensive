@@ -54,11 +54,11 @@ function createDayItem({ time, title, text, index }) {
 
     container.style.setProperty(
         "--bg",
-        `url("/media/day/${index}.png")`
+        `url("../../../media/day/${index}.png")`
     );
     container.style.setProperty(
         "--bg-media",
-        `url("/media/day/${index}-media.png")`
+        `url("../../../media/day/${index}-media.png")`
     );
 
     return item;

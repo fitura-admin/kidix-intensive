@@ -62,7 +62,7 @@ function createCarouselItem({ date, title, text, key }, index) {
     weekElement.textContent = `НЕДЕЛЯ ${index + 1}`;
     dateElement.textContent = date;
     titleElement.textContent = title;
-    iconElement.src = `/media/weeks/carousel-icons/${index + 1}.png`;
+    iconElement.src = `./media/weeks/carousel-icons/${index + 1}.png`;
 
     if (text) {
         textElement.textContent = text;

@@ -3,7 +3,7 @@
   padding-top: var(--space-60px);
   padding-bottom: 65px;
 
-  background-image: url("/media/day/bg.webp");
+  background-image: url("../../../media/day/bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

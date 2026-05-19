@@ -4,10 +4,10 @@
   padding-top: var(--space-60px);
   padding-bottom: var(--space-3);
 
-  background: url("/media/weeks/bg.webp") no-repeat center / cover;
+  background: url("../../../media/weeks/bg.webp") no-repeat center / cover;
 
   @media screen and (width <= 768px) {
-    background: url("/media/weeks/bg-mobile.webp") no-repeat center / cover;
+    background: url("../../../media/weeks/bg-mobile.webp") no-repeat center / cover;
   }
 }
 

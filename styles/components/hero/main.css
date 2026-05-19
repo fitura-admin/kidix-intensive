@@ -13,7 +13,7 @@
   position: relative;
   overflow: hidden;
 
-  background: url("/media/hero/bg.webp") no-repeat center / cover;
+  background: url("../../../media/hero/bg.webp") no-repeat center / cover;
 
   @media screen and (width <= 1024px) {
     padding-top: 150px; /* Высота хедера будет 136 + для скролла */
@@ -23,7 +23,7 @@
     padding-top: var(--space-10);
     padding-bottom: var(--space-10);
     min-height: auto;
-    background: url("/media/hero/bg-mobile.webp") no-repeat center / cover;
+    background: url("../../../media/hero/bg-mobile.webp") no-repeat center / cover;
   }
 }
 
